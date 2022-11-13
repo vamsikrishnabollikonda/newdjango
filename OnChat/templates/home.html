@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<head>
+  <title>OnChat</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <!-- <div class="container"> -->
+  <!-- <style>
+      input[type=text],
+      select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+
+      div {
+        border-radius: 5px;
+        background-color: red;
+        padding: 20px;
+      }
+    </style> -->
+
+  <!-- <style>
+      input[type=text],
+      select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type=submit] {
+        width: 50%;
+        background-color: orange;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type=submit]:hover {
+        background-color: black;
+      }
+
+
+
+      div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+    </style> -->
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+  body {
+    margin: 0;
+    background-color: rgba(0, 255, 255, 0.386);
+  }
+  .onChatMainContainer{
+    height: auto;
+    width: 95%;
+    overflow: hidden;
+  }
+
+  .header1 {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding: 0 15px;
+  }
+
+  .img1 {
+    height: 93px;
+    width: 280px;
+  }
+
+  .onchatLogo {
+    /* background-image: url('./img/logo.jpeg'); */
+    height: 250px;
+    width: 250px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .footer1 {
+    height: 90px;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #27dc9d89;
+    position: absolute;
+    
+    bottom: 0;
+  }
+
+  @media screen and (max-width:600px) {
+    .footer1 {
+      padding: 10px 0;
+    }
+    .onchatLogo{
+      height: 230px;
+      width: 230px;
+    }
+    .img1{
+      height: 60px;
+      width: 180px;
+      margin-right: 20px;
+    }
+  }
+
+  #shivilaLink {
+    text-decoration: none;
+    color: black;
+  }
+
+  #shivilaLink:hover {
+    text-decoration: underline;
+  }
+
+  .onchatContainer {
+    width: 60%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: rgb(178, 201, 64);
+    margin-top: 65px;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 70px;
+  }
+
+  .heading {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+  }
+
+  #POST-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #POST-form>label {
+    padding: 10px 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #POST-form>input {
+    padding: 5px 10px;
+    width: 80%;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #submitBtn {
+    margin-top: 30px;
+    width: 30%;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(183, 234, 33);
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 8px 6px -6px rgba(89, 90, 86, 0.523);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  }
+</style>
+
+<body>
+
+  <div class="onChatMainContainer">
+
+    <div class="header1">
+
+      <img class="onchatLogo" src="https://i.ibb.co/BzMkdJm/logo.png" alt="logo" border="0">
+
+      <a href="https://shivila.com/" target="_blank"><img class="img1" src="https://i.ibb.co/2d3Q7nQ/shivila-Logo-Img-1.png" alt="shivila-Logo-Img-1" ></a>
+    </div>
+    
+    <div class="onchatContainer">
+      <div class="heading">
+        <h1>Welcome to OnChat</h1>
+      </div>
+      <form id="POST-form" method="POST" action="checkview">
+        {% csrf_token %}
+
+        <label for="">Name of the Room:</label>
+        <input type="text" name="room_name" id="room_name" />
+        <label for="">username:</label>
+        <input type="text" name="username" id="username" />
+
+        <button id="submitBtn" type="submit" value="">Enter Room</button>
+      </form>
+    </div>
+
+    <footer class="footer1">
+      <h4 class="firstRow">All Right Reserved. Developed By <a id="shivilaLink" href="https://shivila.com/"
+          target="_blank">Shivila Technologies</a> </h4>
+      <span class="secondRow">Copyright © Shivila Technologies Private Limited, 2022. Use of our products is governed by
+        ourPrivacy Policy.</span>
+    </footer>
+  </div>
+
+</body>
+
+</html>

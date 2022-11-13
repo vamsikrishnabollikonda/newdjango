@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>Data</title>
+</head>
+
+<body>
+    <h1>insert your data</h1>
+    <form method="POST">
+        {% csrf_token %}
+    Name of the Room:<input type="text" palaceholder="Enter username",name="sname" required/></br>
+    stu_Email:<input type="text" palaceholder="Enter your email", name="Email" required/></br>
+    stu_city:<input type="text" palaceholder="Enter your city", name="city" required/></br>
+    <input type="submit"  value ="insert record"/></br>
+    </hr>
+   {% if messages %}
+   {% for message in messages %}
+   
+      <h2 style="color:green;">{{message}}</h2>
+   {% endfor %}
+   {% endif %}
+    </form>
+</body>
+</html>
